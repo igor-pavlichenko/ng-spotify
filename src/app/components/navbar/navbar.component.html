@@ -4,13 +4,22 @@
 		 aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
 		</button>
-		<a class="navbar-brand" href="#">ng-spotify</a>
+		<a class="navbar-brand" [routerLink]="['/']">ng-spotify</a>
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item">
-				<a class="nav-link" [routerLink]="['/']">Home</a>
+				<a class="nav-link"
+				[routerLinkActive]="['active']"
+				[routerLinkActiveOptions]="{ exact: true }"
+				[routerLink]="['/']">
+					Home
+				</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" [routerLink]="['/about']">About</a>
+				<a class="nav-link"
+				[routerLinkActive]="['active']"
+				[routerLink]="['/about']">
+					About
+				</a>
 			</li>
 		</ul>
 	</div>
