@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 .main {
 	margin-top: 80px;
+
+	.artist-thumb {
+		width: 100px;
+		height: auto;
+		margin-right: 10px;
+		float: left;
+	}
 }
