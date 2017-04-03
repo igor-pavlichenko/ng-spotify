@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SpotifyService } from '../../services/spotify.service';
+
 @Component({
 	selector: 'search',// tslint:disable-line
 	templateUrl: './search.component.html',
@@ -8,13 +10,17 @@ import { Component, OnInit } from '@angular/core';
 export class SearchComponent implements OnInit {
 	searchStr: string;
 
-	constructor() { }
+	constructor(private spotifyService: SpotifyService) {
+
+	}
 
 	ngOnInit() {
 	}
 
 	searchMusic() {
-		console.log(this.searchStr);
+		this.spotifyService.searchMusic(this.searchStr).subscribe(response => {
+			console.log(response);
+		});
 	}
 
 }
