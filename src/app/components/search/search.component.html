@@ -9,3 +9,23 @@
 
 	</div>
 </form>
+
+<div class="artists" *ngIf="searchResult">
+	<div *ngFor="let artist of searchResult">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-block">
+						<h4 class="card-title">
+							<a routerLink="/artist/{{artist.id}}">{{artist.name}}</a>
+						</h4>
+						<div>
+							<strong>Genres: </strong>
+							<span *ngFor="let genre of artist.genres">{{genre}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
