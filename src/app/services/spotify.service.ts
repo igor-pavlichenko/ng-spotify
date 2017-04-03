@@ -22,4 +22,11 @@ export class SpotifyService {
 						.map(result => result.json());
 	}
 
+	getArtist(id: string) {
+		const url = 'https://api.spotify.com/v1/artists/' + id;
+
+		return this.http.get(url)
+						.map(result => result.json());
+	}
+
 }
