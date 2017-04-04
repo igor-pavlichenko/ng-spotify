@@ -23,9 +23,17 @@ export class SpotifyService {
 	}
 
 	getArtist(id: string) {
-		const url = 'https://api.spotify.com/v1/artists/' + id;
+		const artistUrl = 'https://api.spotify.com/v1/artists/' + id;
 
-		return this.http.get(url)
+		return this.http.get(artistUrl)
+						.map(result => result.json());
+	}
+
+	getAlbums(artistId: string) {
+		const albumsUrl = 'https://api.spotify.com/v1/artists/'
+						+ artistId + '/albums';
+
+		return this.http.get(albumsUrl)
 						.map(result => result.json());
 	}
 
