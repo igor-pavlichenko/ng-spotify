@@ -4,3 +4,20 @@
 	margin-right: 10px;
 	float: left;
 }
+
+.artist-header {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #333;
+}
+
+.card.album {
+	margin-bottom: 20px;
+	width: 260px;
+	text-align: center;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
